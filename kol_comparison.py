@@ -23,7 +23,7 @@ timestr = time.strftime("%Y%m%d-%H%M%S")
 from simple_salesforce import Salesforce
 import pandas as pd
 
-sf = Salesforce(username='data.admin@celgene.com.full2', password='celgene2',security_token='', sandbox=True)
+sf = Salesforce(username='xxxx', password='yyyy',security_token='', sandbox=True)
 
 #obj_name = input("Enter the Salesforce OBJECT Name : ")
 kol_date = input("Enter the Date : ")
