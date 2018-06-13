@@ -21,7 +21,7 @@ timestr = time.strftime("%Y%m%d-%H%M%S")
 from simple_salesforce import Salesforce
 import pandas as pd
 
-sf = Salesforce(username='data.admin@celgene.com.full2', password='celgene2',security_token='', sandbox=True)
+sf = Salesforce(username='xxxx', password='yyyy',security_token='', sandbox=True)
 query = sf.query_all("SELECT ID,PRESENTATION_ID_VOD__C,CLM_PRESENTATION_NAME_VOD__C,CLM_PRESENTATION_VOD__C from Call2_Key_Message_vod__c where CLM_PRESENTATION_NAME_VOD__C = NULL and CLM_PRESENTATION_VOD__C = NULL")
 #query = sf.query_all("SELECT Id,Presentation_ID_vod__c,CLM_PRESENTATION_NAME_VOD__C,CLM_PRESENTATION_VOD__C from Call2_Key_Message_vod__c LIMIT 10")
 
@@ -86,7 +86,7 @@ df2.to_excel('Excel_To_Update'+timestr+'.xlsx',index=False)#---> Final Excel whi
 outlook = win32.Dispatch('outlook.application')
 
 mail = outlook.CreateItem(0)
-mail.To='m.priya.sankarrao@accenture.com'
+mail.To='xyz.com'
 mail.Subject='Update Excel for Call_Key Messages with NULL Values'
 mail.Body='Hi Team ,\n Find Attched the Update Excel for Call Key Messages with Null Values.\n Kindly Verify and Update.\n Thanks.'
 attachment = "C:\\Users\\m.priya.sankarrao\\Documents\\PYTHON\\Call_Key_Null_Msg\\"+'Excel_To_Update'+timestr+'.xlsx'
