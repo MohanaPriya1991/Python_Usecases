@@ -24,7 +24,7 @@ timestr = time.strftime("%Y%m%d-%H%M%S")
 from simple_salesforce import Salesforce
 import pandas as pd
 
-sf = Salesforce(username='data.admin@celgene.com.full2', password='celgene2',security_token='', sandbox=True)
+sf = Salesforce(username='xxxx', password='yyyy',security_token='', sandbox=True)
 
 #print ("This is the name of the script: ", sys.argv[0])
 #print ("Number of arguments: ", len(sys.argv))
