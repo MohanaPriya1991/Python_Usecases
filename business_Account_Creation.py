@@ -20,7 +20,7 @@ timestr = time.strftime("%Y%m%d-%H%M%S")
 from simple_salesforce import Salesforce
 import pandas as pd
 
-sf = Salesforce(username='data.admin@celgene.com.full2', password='celgene2',security_token='', sandbox=True)
+sf = Salesforce(username='xxxx', password='yyyy',security_token='', sandbox=True)
 
 #query = sf.query_all("SELECT Id, Account_Status_CELG__c,recordtype.name from account where recordtype.name ='New Business Account' and Account_Status_CELG__c = 'Approved by Home Office' ")
 query = sf.query_all("SELECT Id, Account_Status_CELG__c, RecordTypeId,Territory_vod__c from account where RecordTypeId ='012U00000001foq' and Account_Status_CELG__c = 'Approved by Home Office' ")
